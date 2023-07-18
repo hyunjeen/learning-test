@@ -5,8 +5,9 @@ export interface ButtonProps {
   isLoading: boolean;
   reverse?: boolean;
 }
-function Button(props: ButtonProps) {
-  return <StyledButton {...props} disabled={props.isLoading} />;
+
+function Button({ isLoading, ...props }: ButtonProps) {
+  return <StyledButton {...props} disabled={isLoading} />;
 }
 
 export default Button;

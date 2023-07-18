@@ -1,42 +1,14 @@
 import 'styled-components';
+import { BorderRadiusType } from '@/config/theme/_set/border-radius.theme';
+import { IconSizeType } from '@/config/theme/_set/icon-size.theme';
+import { FontType } from '@/config/theme/_set/font.theme';
+import { ColorType } from '@/config/theme/_set/color.theme';
 
 declare module 'styled-components' {
   export interface DefaultTheme {
-    colors: {
-      primary: string;
-      secondary: string;
-      border: string;
-      black: string;
-      gray: string;
-      disable: string;
-    };
-    border: {
-      radius: {
-        sm: number;
-        md: number;
-      };
-    };
-    icon: {
-      size: {
-        sm: number;
-        md: number;
-        lg: number;
-        xl: number;
-      };
-    };
-    font: {
-      heading: {
-        h1: number;
-        h2: number;
-        h3: number;
-        h4: number;
-      };
-      text: {
-        sm: number;
-        md: number;
-        lg: number;
-        xl: number;
-      };
-    };
+    colors: ColorType;
+    borderRadius: BorderRadiusType;
+    iconSize: IconSizeType;
+    font: FontType;
   }
 }

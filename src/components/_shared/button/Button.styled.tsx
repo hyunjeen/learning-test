@@ -1,7 +1,7 @@
 import styled, { css } from 'styled-components';
 import { ButtonProps } from '@/components/_shared/button/index';
 
-const StyledButton = styled.button<ButtonProps>`
+const StyledButton = styled.button<Omit<ButtonProps, 'isLoading'>>`
   ${({ theme, color, reverse }) => css`
     display: flex;
     width: 100%;
@@ -9,7 +9,7 @@ const StyledButton = styled.button<ButtonProps>`
     align-items: center;
     justify-content: center;
     background-color: ${color || theme.colors.primary};
-    border-radius: ${theme.border.radius.sm}px;
+    border-radius: ${theme.borderRadius.sm}px;
     border: 0;
     color: #fff;
     padding: 10px 20px;

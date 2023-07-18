@@ -7,7 +7,6 @@ const meta: Meta<typeof ButtonWithLoading> = {
   tags: ['autodocs'],
   title: 'Components/Unit/ButtonWithLoading',
   component: ButtonWithLoading,
-  args: {},
 };
 
 export const Default: Story = {

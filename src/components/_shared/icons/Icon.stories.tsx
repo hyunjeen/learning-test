@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import { faUser } from '@fortawesome/free-solid-svg-icons';
 import theme from '@/config/theme/theme';
-import { IconSizeKeys } from '@/config/theme/theme.types';
+import { IconSizeType } from '@/config/theme/_set/icon-size.theme';
 import BaseIcon from './BaseIcon';
 
 type Story = StoryObj<typeof BaseIcon>;
@@ -15,7 +15,7 @@ const meta: Meta<typeof BaseIcon> = {
     color: theme.colors.primary,
   },
   argTypes: {
-    size: { control: 'select', options: Object.keys(theme.icon.size) },
+    size: { control: 'select', options: Object.keys(theme.iconSize) },
     color: { control: { type: 'color' } },
   },
 };
@@ -30,7 +30,7 @@ export const Size: Story = {
         justifyContent: 'space-between',
       }}
     >
-      {Object.keys(theme.icon.size).map((value) => (
+      {Object.keys(theme.iconSize).map((value) => (
         <div
           style={{
             display: 'flex',
@@ -49,7 +49,7 @@ export const Size: Story = {
               border: '1px solid #eee',
             }}
           >
-            <BaseIcon {...args} size={value as IconSizeKeys} />
+            <BaseIcon {...args} size={value as keyof IconSizeType} />
           </div>
           <span>{value}</span>
         </div>
