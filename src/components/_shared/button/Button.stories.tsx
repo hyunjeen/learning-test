@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import Button from '@/components/_shared/button/index';
+import Button, { ButtonProps } from '@/components/_shared/button/index';
 
 type Story = StoryObj<typeof Button>;
 
@@ -15,13 +15,13 @@ const meta: Meta<typeof Button> = {
     },
   },
 };
+const render = (args: ButtonProps) => <Button {...args}>hello</Button>;
 export const Default: Story = {
-  render: (args) => <Button {...args}>heelo</Button>,
-  args: {},
+  render,
 };
 
 export const Reverse: Story = {
-  render: (args) => <Button {...args}>heelo</Button>,
+  render,
   args: {
     reverse: true,
   },
