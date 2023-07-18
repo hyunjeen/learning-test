@@ -8,6 +8,7 @@ declare module 'styled-components' {
       border: string;
       black: string;
       gray: string;
+      disable: string;
     };
     border: {
       radius: {

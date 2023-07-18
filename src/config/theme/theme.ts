@@ -7,6 +7,7 @@ const lightTheme: DefaultTheme = {
     border: 'rgb(221, 221, 221)',
     black: '#333',
     gray: 'rgb(181, 181, 181)',
+    disable: 'rgba(165, 165, 165, 0.9)',
   },
   border: {
     radius: {
