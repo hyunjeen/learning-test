@@ -1,12 +1,12 @@
 import styled from 'styled-components';
 import Link from 'next/link';
-import { TextSizeKeys } from '@/config/theme/theme.types';
+import { FontType } from '@/config/theme/_set/font.theme';
 
 interface StyledLinkProps {
-  size: TextSizeKeys;
+  size: keyof FontType['size'];
 }
 const StyledLink = styled(Link)<StyledLinkProps>`
-  font-size: ${({ theme, size }) => theme.font.text[size || 'sm']};
+  font-size: ${({ theme, size }) => theme.font.size[size || 'sm']};
 `;
 
 export default StyledLink;
