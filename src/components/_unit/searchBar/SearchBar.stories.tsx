@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import SearchBar from '@/components/unit/searchBar/index';
+import SearchBar from '@/components/_unit/searchBar/index';
 
 type Story = StoryObj<typeof SearchBar>;
 
@@ -10,11 +10,14 @@ const meta: Meta<typeof SearchBar> = {
 };
 
 export const Default: Story = {
-  render: () => (
+  render: (args) => (
     <div style={{ width: '300px' }}>
-      <SearchBar />
+      <SearchBar {...args} />
     </div>
   ),
+  args: {
+    placeholder: '검색어를 입력하세요',
+  },
 };
 
 export default meta;
