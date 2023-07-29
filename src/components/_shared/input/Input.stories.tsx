@@ -9,14 +9,20 @@ const meta: Meta<typeof Input> = {
   component: Input,
   args: {
     placeholder: 'hello world',
-    isBorder: true,
+    isBorder: false,
     isError: false,
   },
 };
 export const Default: Story = {};
 
+export const Border: Story = {
+  args: {
+    isBorder: true,
+  },
+};
 export const Error: Story = {
   args: {
+    isBorder: true,
     isError: true,
   },
 };

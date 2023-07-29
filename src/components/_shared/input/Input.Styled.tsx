@@ -1,30 +1,29 @@
 import styled, { css } from 'styled-components';
+import { TColor } from '@/config/theme/_set/color.theme';
+import { TBorderRadius } from '@/config/theme/_set/border-radius.theme';
+import { InputProps } from '@/components/_shared/input/index';
 
-export interface InputProps {
-  placeholder?: string;
-  isBorder?: boolean;
-  isError?: boolean;
-}
-
-const Input = styled.input<InputProps>`
+const StyledInput = styled.input<InputProps>`
   background-color: transparent;
   width: 100%;
+  height: 50px;
   border: none;
   outline: none;
-  border-radius: 1px;
-  padding: 10px 10px;
+  font-size: 15px;
 
-  ${({ isBorder }) =>
+  ${({ isBorder, theme, radiusSize }) =>
     isBorder &&
     css`
-      border: 1px solid ${({ theme }) => theme.colors.border};
+      border: 1px solid;
+      ${TColor(theme, 'border', 'border')}
+      ${TBorderRadius(theme, radiusSize)}
     `}
 
-  ${({ isError }) =>
+  ${({ isError, theme }) =>
     isError &&
     css`
-      border-color: red;
+      ${TColor(theme, 'error', 'border')}
     `}
 `;
 
-export default Input;
+export default StyledInput;
