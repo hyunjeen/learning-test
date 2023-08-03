@@ -1,13 +1,13 @@
 import { DefaultTheme } from 'styled-components';
 import colors from '@/config/theme/_set/color.theme';
 import borderRadius from '@/config/theme/_set/border-radius.theme';
-import iconSize from '@/config/theme/_set/icon-size.theme';
 import font from '@/config/theme/_set/font.theme';
+import btnSize from '@/config/theme/_set/btn-size.theme';
 
-const lightTheme: DefaultTheme = {
+const lightTheme: Omit<DefaultTheme, 'media'> = {
   colors: { ...colors },
   borderRadius: { ...borderRadius },
-  iconSize: { ...iconSize },
   font: { ...font },
+  btnSize: { ...btnSize },
 };
 export default lightTheme;
