@@ -46,6 +46,7 @@
         ]
       }
     ],
+    "no-unused-expressions": ["off"],
     "import/extensions": [
       "error",
       "ignorePackages",

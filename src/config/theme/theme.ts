@@ -4,10 +4,10 @@ import borderRadius from '@/config/theme/_set/border-radius.theme';
 import font from '@/config/theme/_set/font.theme';
 import btnSize from '@/config/theme/_set/btn-size.theme';
 
-const lightTheme: Omit<DefaultTheme, 'media'> = {
+const themeConfig: DefaultTheme = {
   colors: { ...colors },
   borderRadius: { ...borderRadius },
   font: { ...font },
   btnSize: { ...btnSize },
 };
-export default lightTheme;
+export default themeConfig;
