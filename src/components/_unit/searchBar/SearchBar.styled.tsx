@@ -1,20 +1,21 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
+import { TColor } from '@/config/theme/_set/color.theme';
+import { TBorderRadius } from '@/config/theme/_set/border-radius.theme';
 
 const Wrap = styled.div`
   display: flex;
+  align-items: center;
   position: relative;
   width: 100%;
+  padding-left: 10px;
+  border: 1px solid;
+  ${({ theme }) => css`
+    ${TColor(theme, 'primary', 'border')}
+    ${TBorderRadius(theme, 'md')}
+  `}
 `;
-const InputWrap = styled.div`
-  width: 100%;
-  padding-right: 20px;
-  border: 1px solid ${({ theme }) => theme.colors.border};
-`;
+
 const IconWrap = styled.div`
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  right: 10px;
-  transform: translateY(25%);
+  margin-right: 10px;
 `;
-export default { Wrap, InputWrap, IconWrap };
+export default { Wrap, IconWrap };

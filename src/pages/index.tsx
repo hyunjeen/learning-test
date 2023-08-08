@@ -1,6 +1,5 @@
-import BaseIcon from '@/components/_shared/icons/BaseIcon';
-import { faUser } from '@fortawesome/free-solid-svg-icons';
+import Header from '@/components/organism/header';
 
 export default function Home() {
-  return <BaseIcon icon={faUser} />;
+  return <Header />;
 }

@@ -3,8 +3,8 @@ import { withThemeFromJSXProvider } from '@storybook/addon-styling';
 import GlobalStyles from "../src/styles/global-styles"
 import { INITIAL_VIEWPORTS } from '@storybook/addon-viewport';
 import { ThemeProvider } from "styled-components";
-import lightTheme from "@/config/theme/theme";
 import { Description, Primary, Stories, Subtitle, Title } from "@storybook/blocks";
+import lightTheme from "../src/config/theme/theme";
 
 const preview: Preview = {
   parameters: {
